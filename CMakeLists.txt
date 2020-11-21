@@ -7,5 +7,6 @@ file(MAKE_DIRECTORY bin)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
 add_subdirectory(Application)
+#add_subdirectory(SfmlGraphics)
 add_subdirectory(googletest)
 add_subdirectory(Tests)
