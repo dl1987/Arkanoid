@@ -6,10 +6,10 @@ namespace
 template<typename BorderT>
 void createAndAssignBorderEntity(EntityManager& entityManager, sf::Vector2f position)
 {
-    auto leftBorder = entityManager.create();
-    BorderT left;
-    left.setPosition(position);
-    leftBorder.assign<Border>(left);
+    auto entity = entityManager.create();
+    BorderT border;
+    border.setPosition(position);
+    entity.assign<Border>(border);
 }
 static bool first_time = true;
 }
