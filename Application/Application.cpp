@@ -4,10 +4,12 @@
 #include "BallBounceSystem.hpp"
 #include "WindowEventSystem.hpp"
 #include "RenderSystem.hpp"
+#include "GameSceneCreationSystem.hpp"
 
 
 Application::Application(sf::RenderWindow& renderWindow)
 {
+    systems.add<GameSceneCreationSystem>();
     systems.add<SpawnSystem>();
     systems.add<BallUpdateSystem>();
     systems.add<BallBounceSystem>(renderWindow);
