@@ -1,4 +1,5 @@
 #pragma once
+#include "Drawable.hpp"
 #include <SFML/Graphics.hpp>
 
 namespace sf
@@ -6,7 +7,7 @@ namespace sf
 class RenderTarget;
 }
 
-class IBallShape
+class IBallShape : public Drawable
 {
 public:
     virtual void setPosition(sf::Vector2<float>&) = 0;

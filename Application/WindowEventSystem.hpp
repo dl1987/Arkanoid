@@ -9,6 +9,6 @@ class WindowEventSystem : public System<WindowEventSystem>
     sf::RenderWindow& renderWindow;
 public:
     WindowEventSystem(sf::RenderWindow&);
-    void update(EntityManager&, EventManager&, TimeDelta);
+    void update(EntityManager&, EventManager&, TimeDelta) override;
 };
 
