@@ -6,4 +6,4 @@ googletest-build
 googletest-src
 googletest-download
 build
-
+CMakeLists.txt.user

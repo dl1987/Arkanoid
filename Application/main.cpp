@@ -11,21 +11,6 @@ int main()
 
     while(window.isOpen())
     {
-        sf::Event event;
-        while(window.pollEvent(event))
-        {
-            switch(event.type)
-            {
-            case sf::Event::Closed:
-            case sf::Event::KeyPressed:
-                window.close();
-                break;
-
-            default:
-                break;
-            }
-        }
-
         window.clear();
         app.update(clock.restart().asSeconds());
         window.display();

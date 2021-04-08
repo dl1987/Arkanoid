@@ -3,14 +3,14 @@
 
 namespace sf
 {
-class RenderTarget;
+class RenderWindow;
 }
 
 
 class Application : public entityx::EntityX
 {
 public:
-    Application(sf::RenderTarget&);
+    Application(sf::RenderWindow&);
 
     void update(entityx::TimeDelta);
 };

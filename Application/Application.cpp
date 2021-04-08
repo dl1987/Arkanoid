@@ -3,14 +3,16 @@
 #include "BallRenderSystem.hpp"
 #include "BallUpdateSystem.hpp"
 #include "BallBounceSystem.hpp"
+#include "WindowEventSystem.hpp"
 
 
-Application::Application(sf::RenderTarget& renderTarget)
+Application::Application(sf::RenderWindow& renderWindow)
 {
     systems.add<SpawnSystem>();
-    systems.add<BallRenderSystem>(renderTarget);
+    systems.add<BallRenderSystem>(renderWindow);
     systems.add<BallUpdateSystem>();
-    systems.add<BallBounceSystem>(renderTarget);
+    systems.add<BallBounceSystem>(renderWindow);
+    systems.add<WindowEventSystem>(renderWindow);
     systems.configure();
 }
 
