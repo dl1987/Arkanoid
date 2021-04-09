@@ -9,6 +9,7 @@ class Border : public Drawable
 public:
     void draw(sf::RenderTarget&);
     void setPosition(const sf::Vector2f&);
+    sf::FloatRect getGlobalBounds() const;
     Border(const sf::Vector2f );
 };
 

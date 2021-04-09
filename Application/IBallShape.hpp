@@ -12,4 +12,5 @@ class IBallShape : public Drawable
 public:
     virtual void setPosition(sf::Vector2<float>&) = 0;
     virtual void draw(sf::RenderTarget&) = 0;
+    virtual sf::FloatRect getGlobalBounds() const = 0;
 };

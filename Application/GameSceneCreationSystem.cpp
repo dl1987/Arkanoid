@@ -1,5 +1,6 @@
 #include "GameSceneCreationSystem.hpp"
 #include "Border.hpp"
+#include "Bounce.hpp"
 
 namespace
 {
@@ -10,6 +11,9 @@ void createAndAssignBorderEntity(EntityManager& entityManager, sf::Vector2f posi
     BorderT border;
     border.setPosition(position);
     entity.assign<Border>(border);
+    Bounce bounce;
+    bounce.update(border.getGlobalBounds());
+    entity.assign<Bounce>(bounce);
 }
 static bool first_time = true;
 }

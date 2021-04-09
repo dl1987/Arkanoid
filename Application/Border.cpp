@@ -16,3 +16,8 @@ void Border::setPosition(const sf::Vector2f & vect)
 {
     shape.setPosition(vect);
 }
+
+sf::FloatRect Border::getGlobalBounds() const
+{
+    return shape.getGlobalBounds();
+}

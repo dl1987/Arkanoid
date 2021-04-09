@@ -12,7 +12,7 @@ Application::Application(sf::RenderWindow& renderWindow)
     systems.add<GameSceneCreationSystem>();
     systems.add<SpawnSystem>();
     systems.add<BallUpdateSystem>();
-    systems.add<BallBounceSystem>(renderWindow);
+    systems.add<BallBounceSystem>();
     systems.add<WindowEventSystem>(renderWindow);
     systems.add<RenderSystem>(renderWindow);
     systems.configure();

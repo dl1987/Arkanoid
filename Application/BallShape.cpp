@@ -18,3 +18,8 @@ void BallShape::draw(sf::RenderTarget& target)
 {
     target.draw(shape);
 }
+
+sf::FloatRect BallShape::getGlobalBounds() const
+{
+    return shape.getGlobalBounds();
+}
